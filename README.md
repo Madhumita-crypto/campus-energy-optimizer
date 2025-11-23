@@ -88,13 +88,21 @@ Saved using joblib with compression level 3
 **Project Structure**
 campus-energy-optimizer
 │
+
 ├── app.py
+
 ├── energy_model.joblib
+
 ├── avg_hour_building.csv
+
 ├── data/
+
 │     └── campus_energy_dataset.csv
+
 ├── assets/
+
 │     └── header.png
+
 └── requirements.txt
 
 **Running the App Locally**
