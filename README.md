@@ -1,4 +1,5 @@
 **Campus Energy Optimizer**
+
 A streamlined machine learning application that predicts campus energy usage and provides intuitive analytics through a polished Streamlit dashboard.
 
 A Streamlit-based machine learning application that predicts hourly energy consumption (kWh) for different types of campus buildings.
