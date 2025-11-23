@@ -77,6 +77,8 @@ st.write("")  # spacer
 
 # ---------------- Inputs (grouped) ----------------
 st.subheader("📅 Timing & Schedule")
+st.markdown("<p style='color:#9aa0a6; font-size:14px;'>Operational timing factors that influence HVAC and lighting loads.</p>", unsafe_allow_html=True)
+
 col1, col2 = st.columns([2, 1])
 with col1:
     hour = st.slider("Hour", 0, 23, 12)
@@ -85,10 +87,14 @@ with col2:
 holiday = st.selectbox("Holiday?", [0, 1], format_func=lambda x: "No" if x == 0 else "Yes")
 
 st.subheader("🌤 Environment Parameters")
+st.markdown("<p style='color:#9aa0a6; font-size:14px;'>Weather conditions directly impact cooling, heating, and ventilation energy usage.</p>", unsafe_allow_html=True)
+
 temperature = st.number_input("Temperature (°C)", min_value=0.0, max_value=50.0, value=28.0, step=0.5)
 humidity = st.number_input("Humidity (%)", min_value=0.0, max_value=100.0, value=55.0, step=0.5)
 
 st.subheader("🏫 Building & Usage Details")
+st.markdown("<p style='color:#9aa0a6; font-size:14px;'>Building characteristics and occupancy patterns help determine realistic consumption levels.</p>", unsafe_allow_html=True)
+
 occupancy = st.number_input("Occupancy (people)", min_value=0, max_value=2000, value=50, step=1)
 building_type = st.selectbox("Building Type", ["Academic", "Hostel", "Library", "Admin", "Lab"])
 previous_usage = st.number_input("Previous Usage (kWh)", min_value=0.0, max_value=5000.0, value=30.0, step=0.5)
@@ -167,6 +173,8 @@ if predict_clicked:
 # ---------------- Average-energy-by-hour chart ----------------
 st.markdown("---")
 st.subheader("📈 Average energy usage by hour (per building type)")
+st.markdown("<p style='color:#9aa0a6; font-size:14px;'>A historical view of typical hourly consumption patterns for each building category.</p>", unsafe_allow_html=True)
+
 
 avg_df = None
 # 1) check for precomputed avg CSV in repo
